@@ -2650,6 +2650,7 @@ sup.print {
 
 /* =========== Temporary overides and setups etc ============*/
 
+
 .textwidget li a {  
  
   display: block;
@@ -2669,18 +2670,6 @@ sup.print {
   position: relative;
 }
 
-/*
-.hamburger {
-  display: none;
-  position: absolute;
-  top: 8px;
-  left: 94%;
-  color: #fff;
-  font-size: 150%;
-  z-index: 10;
-}
-*/
-
 .hamburger-dev {
   display: none;
   position: absolute;
@@ -2691,7 +2680,6 @@ sup.print {
   color: #fff;
 }
 
-
 input[type=checkbox] {
   position: absolute;
   top: -9999px;
@@ -2701,7 +2689,6 @@ input[type=checkbox] {
 .header #logo {
   right: 10px;
 }
-
 
 .site-sidebar {
   position: relative;
@@ -2886,18 +2873,6 @@ input[type=checkbox]:checked ~ .search-bar {
          display: block;
         }
 
-  /* section sidebar toggle original working styles */  
-  /*  
-  input[type=checkbox]:checked ~ .section-sidebar {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: red;
-    z-index: 100;  
-  }
-  */
-
   input[type=checkbox]:checked ~ .section-sidebar {
     display: block;
     left: 0;
@@ -2907,14 +2882,6 @@ input[type=checkbox]:checked ~ .search-bar {
     transition: left .3s;
     }
 
-  /*
-  input[type=checkbox]:checked ~ .content-main {
-    position: relative;
-    left: 30%;
-    max-width: 68%;
-  }
-  */
-
   .nav-trigger:checked + label, .content-main {
     transition: left .3s;
     }
@@ -2923,12 +2890,6 @@ input[type=checkbox]:checked ~ .search-bar {
     text-align: left;
     padding-left: 10px;
     }    
-
-  /*
-   .search-demo { 
-    display: none;
-    }  
-  */
 
   ul.breadcrumbs {
     display: none;
@@ -2954,7 +2915,6 @@ input[type=checkbox]:checked ~ .search-bar {
 
   @media only screen and (max-width: 400px) {
 
-  /* old rules section-sidebar. Test nav kicks in at 800px as of 21/4 */
   /*
     .section-sidebar {
       position: relative;
