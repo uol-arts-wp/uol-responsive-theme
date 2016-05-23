@@ -2733,7 +2733,7 @@ input[type=checkbox]:checked ~ .search-bar {
   display: block;
   } 
 
-/*========================== RESPONSIVE TYLES ======================*/
+/*========================== RESPONSIVE STYLES ======================*/
 
 /* ====================== 800px media query starts ===================== */
 
@@ -2889,7 +2889,7 @@ input[type=checkbox]:checked ~ .search-bar {
     text-decoration: underline;
     }
 
-  .search-bar { /* adjusted height as is inhertiting nav-main styles somehow?? */
+  .search-bar { /* adjusted height as inhertiting nav-main styles somehow?? */
     height: 46px;
   }
 
