@@ -1,6 +1,6 @@
 /*!
  * Main CSS for University of Leeds Responsive Wordpress theme
- * @author Peter Edwards <p.l.edwards@leeds.ac.uk> / Mark Wales <mark@smallhadroncollider.com> / Steve Honeyman <s.honeyman@leeds.ac.uk>
+ * @author Peter Edwards <p.l.edwards@leeds.ac.uk> / Mark Wales <mark@smallhadroncollider.com> / Steve Honeyman
  * @version 1.2-alpha
  * @package Wordpress
  * @subpackage UoL_theme
@@ -2647,23 +2647,26 @@ sup.print {
   }
 }
 
+/* ================= OVERIDES AND SETUPS  ================ */
 
-/* =========== Temporary overides and setups etc ============*/
+.header #logo {
+  right: 10px;
+}
 
+/* -------------- site and section sidebar styles ---------------*/
+.sidebar-corporate .site-sidebar ul li a {
+  border: none;
+}
+
+.site-sidebar {
+  position: relative;
+  top: 0; 
+}
 
 .textwidget li a {  
- 
   display: block;
   padding-top: 12px;
   text-decoration: none;  
-}
-
-.textwidget li a:hover {
-  text-decoration: underline;
-}
-
-.sidebar-corporate .site-sidebar ul li a {
-  border: none;
 }
 
 #primary-nav {
@@ -2686,15 +2689,12 @@ input[type=checkbox] {
   left: -9999px; 
 }
 
-.header #logo {
-  right: 10px;
+/* -------- quick links button ---------------- */
+.quick-links {
+  display: none;
 }
 
-.site-sidebar {
-  position: relative;
-  top: 0; 
-}
-
+/* ----------- search styles --------------*/
 .search-demo {
   margin: 8px 5px 0 0;
   float: right;
@@ -2706,10 +2706,6 @@ input[type=checkbox] {
   border-radius: 3px;
 }
 
- .quick-links {
-  display: none;
-}
-
 .search-toggle-dev {
   width: 25px;
   height: 25px;
@@ -2717,8 +2713,6 @@ input[type=checkbox] {
   position: absolute;
   top: 60px;
   right: 15px;
-  color: white;
-  font-size: 150%;
   background-image: url('../img/search-icon.png');
   background-size: 100%;
   background-repeat: no-repeat;
@@ -2733,23 +2727,19 @@ input[type=checkbox] {
   height: 75px;
   display: none;
   background-color: #353431;
-/*  background-color: #555451; */
-/*  background-color: #e8e7e1; */
   }
 
-
 input[type=checkbox]:checked ~ .search-bar {
-       display: block;
-      } 
+  display: block;
+  } 
 
-/*==================== RESPONSIVE MEDIA QUERIES ===================*/
+/*========================== RESPONSIVE TYLES ======================*/
 
-/* ========================= 800px media query starts ===================== */
+/* ====================== 800px media query starts ===================== */
 
-@media only screen and (max-width: 800px) {
+@media (max-width: 800px) {
 
-
-/* --- note: most margins and padding removed to establish crude styles; refine later --- */
+/* --- note: most margins and padding removed to establish crude styles, need to refine later --- */
 
 /* --- basic sidebar styles --- */
   .sidebars-site .content-main, .sidebars-both .content-main {
@@ -2757,14 +2747,12 @@ input[type=checkbox]:checked ~ .search-bar {
     clear: left;
   }
 
-  .sidebar-corporate .site-sidebar, .section-sidebar {
-  background-color;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#efefef+0,ffffff+100 */
-  background: rgb(239,239,239); /* Old browsers */  
-  background: -moz-linear-gradient(top,  rgba(239,239,239,1) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  rgba(239,239,239,1) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  rgba(239,239,239,1) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+  .sidebar-corporate .site-sidebar, .section-sidebar { /* temporary gradient */
+    background: #ebeae4; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ebeae4 0%, #f9f8f0 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #ebeae4 0%,#f9f8f0 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #ebeae4 0%,#f9f8f0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebeae4', endColorstr='#f9f8f0',GradientType=0 ); /* IE6-9 */
   }
  
 
@@ -2791,19 +2779,18 @@ input[type=checkbox]:checked ~ .search-bar {
 
   /* --- site-sidebar styles --- */
   .site-sidebar {
-  top: 0;  
-  float: left;
-  clear: both; 
-  width: 100%; 
-  height: auto;
-  padding: 0;
+    top: 0;  
+    float: left;
+    clear: both; 
+    width: 100%; 
+    height: auto;
+    padding: 0;
   }
 
   .textwidget img {
-   max-width: 50%;
-  /* clear: right; */
-  float: none;
-  margin: 0;
+    max-width: 50%;
+    float: none;
+    margin: 0;
   }
 
   img {
@@ -2868,7 +2855,6 @@ input[type=checkbox]:checked ~ .search-bar {
   cursor: pointer;
   } 
 
-
   input[type=checkbox]:checked ~ .nav-main li a {
          display: block;
         }
@@ -2897,13 +2883,13 @@ input[type=checkbox]:checked ~ .search-bar {
 
   .quick-links {
     font-size: 95%;
-  }  
+    }  
 
   .quick-links:hover {
     text-decoration: underline;
-  }
+    }
 
-  .search-bar { /* adjusted height as is inhertiting nav-main somehow?? */
+  .search-bar { /* adjusted height as is inhertiting nav-main styles somehow?? */
     height: 46px;
   }
 
@@ -2911,18 +2897,12 @@ input[type=checkbox]:checked ~ .search-bar {
 
 
 
-/* ========================== 400px media query starts ========================== */
+/* ========================== 380px media query starts ========================== */
 
-  @media only screen and (max-width: 400px) {
+/* content seems to be breaking between 380 and 420, esp when images aligned right */
 
-  /*
-    .section-sidebar {
-      position: relative;
-      left: 0;
-      width: 100%;
-      height: auto;
-    }
-  */
+  @media (max-width: 380px) {
+
     .sidebars-site 
     .content-main {
     width: 100%;
@@ -2934,5 +2914,5 @@ input[type=checkbox]:checked ~ .search-bar {
     }
 
 
-} /* ======================= 400px end ============================== */
+} /* ======================= 380px end ============================== */
 
