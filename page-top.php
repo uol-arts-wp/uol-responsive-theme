@@ -34,9 +34,8 @@ $theme_options = get_uol_theme_options();
 <!--=============== nav =================-->
 
     <div id="primary-nav">
-<!-- wrapper to tidy nav height up, use float hamburger right fix to improve semantics? -->
-     
-        <div class="responsive-nav">
+
+        <div class="responsive-nav"><!-- wrapper to tidy nav height up -->
             <label for="toggle-1"><span class="hamburger-dev">&#9776;</span></label> 
             <input type="checkbox" id="toggle-1">   
         
@@ -52,7 +51,7 @@ $theme_options = get_uol_theme_options();
 <!--================ search ===============================-->
 
     <div class="search-bar-container">
-        <label for="search-toggle"><span class="search-toggle-dev"><!--&#128269; &#174;--></span></label>
+        <label for="search-toggle"><span class="search-toggle-dev"><!--uses background image for icon--></span></label>
                 <input type="checkbox" id="search-toggle">  
 
         <div class="search-bar">    
@@ -62,6 +61,7 @@ $theme_options = get_uol_theme_options();
             </form>
         </div>
      </div> 
+
 <!--=================== main content loop, ie stuff between sidebars ===================-->
 
    <!-- <?php insert_breadcrumbs(); ?> -->
@@ -77,18 +77,18 @@ $theme_options = get_uol_theme_options();
         </div>
   
     
-        <div class="content-main">
+    <div class="content-main">
           
-            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                 
-                <h2><?php the_title(); ?></h2> 
-                <?php the_content(); ?>
+            <h2><?php the_title(); ?></h2> 
+            <?php the_content(); ?>
                    
-            <?php endwhile; else : ?>
-                <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-            <?php endif; ?>
+        <?php endwhile; else : ?>
+            <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+        <?php endif; ?>
            
-        </div>
+    </div>
     
    
     <!--=============== site sidebar (moved from in original place in doc flow) ======================-->        
